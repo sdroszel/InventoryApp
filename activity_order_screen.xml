@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-smallcaps"
+        android:paddingBottom="8dp"
+        android:text="Available Products"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/availableProducts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingVertical="8dp">
+
+        <EditText
+            android:id="@+id/itemQuantityText"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-smallcaps"
+            android:hint="Quantity"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/addToOrderBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#136916"
+            android:fontFamily="sans-serif-smallcaps"
+            android:paddingHorizontal="12dp"
+            android:text="Add to Order" />
+
+        <Button
+            android:id="@+id/removeFromOrderBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="#9B0505"
+            android:fontFamily="sans-serif-smallcaps"
+            android:paddingHorizontal="12dp"
+            android:text="Remove Item" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-smallcaps"
+        android:paddingBottom="8dp"
+        android:text="Current Order"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/orderCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:addStatesFromChildren="false"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp" />
+
+    <TextView
+        android:id="@+id/cartTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="end"
+        android:padding="16dp"
+        android:text="Total: $0.00"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/finishOrderBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#3F51B5"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Finish Order"
+        android:textStyle="bold" />
+
+</LinearLayout>
